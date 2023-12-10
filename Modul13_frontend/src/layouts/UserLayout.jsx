@@ -10,7 +10,7 @@ const routes = [
     {
         path: "/user/content",
         name: "My Videos",
-    }
+    },
 ];
 const UserLayout = ({ children }) => {
     return (

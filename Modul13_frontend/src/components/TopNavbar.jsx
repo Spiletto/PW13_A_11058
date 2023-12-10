@@ -45,7 +45,6 @@ const TopNavbar = ({ routes }) => {
                                 </Button>
                             </Nav.Link>
                         ))}
-                        {/* Log out */}
                         <Nav.Link onClick={logout}>
                             <Button variant="danger" className="w-100">
                                 Log Out

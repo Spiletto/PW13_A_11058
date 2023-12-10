@@ -16,6 +16,11 @@ const DashboardPage = () => {
                 console.log(err);
             });
     }, []);
+
+    const handleReviewClick = (contentId) => {
+        // Navigasi ke halaman review dengan ID konten
+        history.push(`/review/${contentId}`);
+      }
     return (
         <Container className="mt-4">
             <Stack direction="horizontal" gap={3} className="mb-3">
@@ -52,6 +57,13 @@ const DashboardPage = () => {
                                         {content.title}
                                     </h5>
                                     <p className="card-text">{content.description}</p>
+                                    <button
+                                        type="button"
+                                        className="btn btn-primary w-100"
+                                        onClick={() => handleReviewClick(content.id)}
+                                    >
+                                        Review
+                                    </button>
                                 </div>
                             </div>
                         </Col>

@@ -1,4 +1,5 @@
 import useAxios from ".";
+
 // Mendapatkan semua content untuk ditaruh di halaman dashboard
 export const GetAllContents = async () => {
     try {
@@ -14,7 +15,6 @@ export const GetAllContents = async () => {
     }
 };
 
-// Mendapatkan semua content user yang sedang login
 export const GetMyContents = async () => {
     const id = JSON.parse(sessionStorage.getItem("user")).id;
     try {
@@ -29,6 +29,7 @@ export const GetMyContents = async () => {
         throw error.response.data;
     }
 };
+
 // [Tidak dipakai] Mendapatkan content by id user
 export const GetContentById = async (id) => {
     try {
@@ -43,6 +44,7 @@ export const GetContentById = async (id) => {
         throw error.response.data;
     }
 };
+
 // Membuat content baru
 export const CreateContent = async (data) => {
     try {

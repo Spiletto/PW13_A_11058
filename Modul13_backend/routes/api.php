@@ -29,4 +29,11 @@ Route::middleware('auth:api')->group(function(){
     Route::delete('/contents/{id}',[App\Http\Controllers\Api\ContentController::class,'destroy']);
 
     Route::get('/contents/user/{id}',[App\Http\Controllers\Api\ContentController::class,'showContentbyUser']);
+
+    Route::get('/reviews',[App\Http\Controllers\Api\ReviewsController::class,'index']);
+    Route::post('/reviews',[App\Http\Controllers\Api\ReviewsController::class,'store']);
+    Route::get('/reviews/{id}',[App\Http\Controllers\Api\ReviewsController::class,'show']);
+    Route::delete('/reviews/{id}',[App\Http\Controllers\Api\ReviewsController::class,'destroy']);
+    
+    Route::get('/reviews/user/{id}',[App\Http\Controllers\Api\ReviewsController::class,'showReviewbyUser']);
 });
